@@ -1,14 +1,10 @@
-…or create a new repository on the command line
-echo "# SingleSPAExprences" >> README.md
+A sigle page application as an assignment 
 
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/JohnValadakis/SingleSPAExprences.git
-git push -u origin main
+Build with webpack, EsLint and Babel
 
-…or push an existing repository from the command line
-git remote add origin https://github.com/JohnValadakis/SingleSPAExprences.git
-git branch -M main
-git push -u origin main
+•	Download the repository on a local folder using the github public profile.
+•	Navigate to the source folder containing the package.json 
+•	Run “npm install” 
+•	Run “npm start” in order to run the application on a local environment
+•	Run “npm build” in order to build the project on the folder “./dist”
+•	Run “npm run predeploy” and “npm run deploy” if you want to build and run the application on git hub pages.
