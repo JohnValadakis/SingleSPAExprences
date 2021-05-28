@@ -1,7 +1,6 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { render, queryByAttribute, fireEvent } from '@testing-library/react';
-//import { act } from 'react-dom/test-utils';
 import Forms from './Forms';
 
 const getById = queryByAttribute.bind(null, 'id');

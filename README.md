@@ -1,5 +1,11 @@
 A sigle page application as an assignment 
 
+Released with verion: 
+
+• node: v14.15.5
+
+• npm: v 6.14.11 
+
 Build with webpack, EsLint and Babel
 
 •	Download the repository on a local folder using the github public profile.
