@@ -1,0 +1,67 @@
+{
+  "homepage": "http://JohnValadakis.github.io/SingleSPAExprences",
+  "name": "tetractys",
+  "version": "1.0.0",
+  "description": "An assignment for Front-End React Development position ",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "watch": "webpack --watch",
+    "start": "cls && webpack serve --config ./webpack.config.js --mode development --open",
+    "build": "webpack --mode production",
+    "eslint-fix": "clseslint --fix \"src/**/*.js\"",
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/JohnValadakis/SingleSPAExprences"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.27.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.23.2",
+    "gh-pages": "^3.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.1",
+    "jsdom": "^16.6.0",
+    "jsdom-global": "^3.0.2",
+    "less": "^4.1.1",
+    "less-loader": "^9.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "clsx": "^1.1.1",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-number-format": "^4.6.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ]
+  }
+}
