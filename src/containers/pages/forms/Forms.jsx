@@ -35,7 +35,7 @@ function Forms ({ model }) {
     const classes = useStyles();
     const expenseTypes = Constants.ExpenseTypes;
     const [description, setDescription] = useState('');
-    const [amount, setAmount] = useState();
+    const [amount, setAmount] = useState('');
     const [date, setDate] = useState(new Date());
     const [type, setType] = useState(expenseTypes[0]);
     const [item, setItem] = useState(model || null);
@@ -54,7 +54,7 @@ function Forms ({ model }) {
 
     const clearData = () => {
         setDescription('');
-        setAmount();
+        setAmount('');
         setDate(new Date());
         setType(expenseTypes[0]);
         setItem(null);
@@ -64,7 +64,7 @@ function Forms ({ model }) {
         let newItem = { description: description, amount: amount, date: moment(date).format(), type: type };
         setItem(newItem);
         setDescription('');
-        setAmount();
+        setAmount('');
         setDate(new Date());
         setType(expenseTypes[0]);
     };
@@ -86,7 +86,7 @@ function Forms ({ model }) {
                     id="amount-input" label="Amount" variant="outlined" name="numberformat"
                     required value={amount}
                     InputProps={{ inputComponent: Formaters.CurrencyFormatCustom }}
-                    onChange={e => { setAmount(parseFloat(e.target.value, 10).toFixed(2)); }}
+                    onChange={e => { setAmount(e.target.value); }}
                 />
                 <TextField className={clsx(classes.margin, classes.textField)}
                     id="exp-type-input" label="ExpenseType" variant="outlined" select
@@ -102,9 +102,10 @@ function Forms ({ model }) {
             <div className={classes.row}>
                 <TextField className={clsx(classes.margin, classes.textField)}
                     id="datetime-local" label="Expense date" type="datetime-local"
-                    required defaultValue={moment(date).format("YYYY-MM-DDTHH:mm")}
+                    required
                     onChange={(e) => setDate(e.target.value)}
                     InputLabelProps={{ shrink: true }}
+                    value={moment(date).format("YYYY-MM-DDTHH:mm")}
                 />
             </div>
             <div className={clsx(classes.actions, classes.margin)} style={{ alignContent: 'flex-end' }}>

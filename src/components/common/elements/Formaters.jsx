@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NumberFormat from "react-number-format";
 
 function CurrencyFormatCustom (props) {
-    const { inputRef, onChange, ...other } = props;
-
+    const { inputRef, onChange, value, ...other } = props;
+    useEffect(() => {
+        console.log(value);
+    });
     return (
         <NumberFormat
             {...other}
@@ -11,8 +13,9 @@ function CurrencyFormatCustom (props) {
             onValueChange={values => {
                 onChange({ target: { name: props.name, value: values.value } });
             }}
+            value={value}
             thousandSeparator
-            isNumericString = {typeof value === 'string'}
+            isNumericString
         />
     );
 }
